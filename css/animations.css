@@ -1,0 +1,197 @@
+/* Animations for Vanapalli Anusha's Portfolio
+-------------------------------------------------- */
+
+/* Bounce Animation for Scroll Down Arrow */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scale In Animation */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Slide In Left Animation */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide In Right Animation */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Typing Animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Gradient Animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Apply animations to elements */
+
+/* Hero section animations */
+.hero-text {
+  animation: fadeIn 1s ease;
+}
+
+.hero-image {
+  animation: scaleIn 1s ease 0.5s both;
+}
+
+.image-bg {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Typed text animation */
+.typed-text {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  display: inline-block;
+}
+
+/* Section content animations */
+.section-header {
+  animation: fadeIn 0.8s ease;
+}
+
+/* Skills progress animation triggered by JavaScript */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Timeline item animations */
+.timeline-item {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.8s ease;
+}
+
+.timeline-item.animated {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Project card hover effects */
+.project-card {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact form animations */
+.form-group input,
+.form-group textarea {
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  transform: translateY(-2px);
+}
+
+/* Hobby item animations */
+.hobby-item {
+  transition: all 0.3s ease;
+}
+
+.hobby-item:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+/* Theme toggle animation */
+.theme-toggle i {
+  transition: transform 0.5s ease;
+}
+
+.theme-toggle:hover i {
+  transform: rotate(360deg);
+}

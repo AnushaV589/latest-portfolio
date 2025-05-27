@@ -1,0 +1,246 @@
+/* Responsive Styles for Vanapalli Anusha's Portfolio
+-------------------------------------------------------- */
+
+/* Larger Desktop (1200px and above) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+  
+  .projects-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Standard Desktop (992px - 1199px) */
+@media (max-width: 1199px) {
+  :root {
+    --font-size-3xl: 2.25rem;  /* 36px */
+    --font-size-2xl: 1.75rem;  /* 28px */
+  }
+  
+  .hero-content {
+    gap: var(--space-md);
+  }
+  
+  .image-container {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .projects-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet (768px - 991px) */
+@media (max-width: 991px) {
+  :root {
+    --space-xl: 40px;
+    --space-xxl: 56px;
+  }
+  
+  .hero {
+    padding-top: calc(var(--space-xl) + 60px);
+    padding-bottom: var(--space-xl);
+  }
+  
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  
+  .hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-btns {
+    justify-content: center;
+  }
+  
+  .scroll-down {
+    display: none;
+  }
+  
+  .image-container {
+    margin-bottom: var(--space-lg);
+  }
+  
+  .about-content {
+    flex-direction: column;
+    gap: var(--space-lg);
+  }
+  
+  .about-image {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  
+  .skills-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  .education-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .footer-info p {
+    max-width: 100%;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+}
+
+/* Mobile Large (576px - 767px) */
+@media (max-width: 767px) {
+  :root {
+    --font-size-3xl: 2rem;    /* 32px */
+    --font-size-2xl: 1.5rem;  /* 24px */
+    --font-size-xl: 1.25rem;  /* 20px */
+    --space-lg: 24px;
+    --space-xl: 32px;
+  }
+  
+  .hamburger {
+    display: block;
+    z-index: 1001;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--white);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xl) 0;
+    box-shadow: var(--shadow-lg);
+    transition: right var(--transition-normal);
+    z-index: 1000;
+  }
+  
+  .nav-links.open {
+    right: 0;
+  }
+  
+  .nav-links li {
+    margin: var(--space-sm) 0;
+  }
+  
+  .theme-toggle {
+    position: fixed;
+    bottom: var(--space-xl);
+    right: var(--space-xl);
+    z-index: 1001;
+    display: none;
+  }
+  
+  .theme-toggle.open {
+    display: block;
+  }
+  
+  .hamburger.open span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open span:last-child {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+  
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  
+  .image-container {
+    width: 250px;
+    height: 250px;
+  }
+  
+  .personal-info {
+    grid-template-columns: 1fr;
+  }
+  
+  .projects-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+/* Mobile Small (Up to 575px) */
+@media (max-width: 575px) {
+  :root {
+    --font-size-3xl: 1.75rem; /* 28px */
+    --font-size-2xl: 1.5rem;  /* 24px */
+    --font-size-xl: 1.25rem;  /* 20px */
+    --font-size-lg: 1.125rem; /* 18px */
+    --space-md: 16px;
+    --space-lg: 24px;
+  }
+  
+  .section {
+    padding: var(--space-lg) 0;
+  }
+  
+  .section-header {
+    margin-bottom: var(--space-lg);
+  }
+  
+  .logo h1 {
+    font-size: var(--font-size-lg);
+  }
+  
+  .hero-btns {
+    flex-direction: column;
+    gap: var(--space-xs);
+    align-items: center;
+  }
+  
+  .hero-btns .btn {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .image-container {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .hobby-items {
+    justify-content: space-around;
+  }
+  
+  .timeline-content {
+    padding: var(--space-sm);
+  }
+}
