@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const typedTextElement = document.querySelector('.typed-text');
     if (!typedTextElement) return;
     
-    const texts = ['Full Stack Developer', 'Java Developer', 'Backend Developer'];
+    const texts = ['Full Stack Developer', 'Java Developer', 'Backend Developer','Fronted Developer'];
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
